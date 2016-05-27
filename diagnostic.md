@@ -149,7 +149,7 @@ let updateDonut = function (donutID) {
     method: 'PATCH',
     data: {
       "donut" {
-        "name": "French Cruller",
+        "name": "Krüller",
       }
     }
   });
