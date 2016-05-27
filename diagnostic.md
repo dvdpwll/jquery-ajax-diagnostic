@@ -47,7 +47,7 @@ curl --include --request GET http://www.example.com/donuts/1
 Write an AJAX request to retrieve a single donut from the server.
 
 ```js
-let getDonut = function () {
+let getDonut = function (donutID) {
   return $.ajax({
     url: 'http://www.example.com/donuts/' + donutID,
     method: 'GET',
@@ -67,7 +67,7 @@ curl --include --request DELETE http://www.example.com/donuts/1
 Write an AJAX request to delete a single donut from the server.
 
 ```js
-let deleteDonut = function () {
+let deleteDonut = function (donutID) {
   return $.ajax({
     url: 'http://www.example.com/donuts/' + donutID,
     method: 'DELETE',
@@ -101,7 +101,7 @@ curl --include --request "POST" "http://example.com/donuts" \
 Write an AJAX request to create a single donut on the server using JSON.
 
 ```js
-let createDonut = function (form) {
+let createDonut = function () {
   return $.ajax({
     url: 'http://localhost:3000/donuts',
     method: 'POST',
@@ -143,9 +143,9 @@ curl --include --request "PATCH" "http://example.com/donuts/42" \
 Write an AJAX request to change the donut on the server using JSON.
 
 ```js
-let createDonut = function (form) {
+let createDonut = function (donutID) {
   return $.ajax({
-    url: 'http://localhost:3000/donuts/42',
+    url: 'http://localhost:3000/donuts/' + donutID,
     method: 'PATCH',
     data: {
       "donut" {
