@@ -143,7 +143,7 @@ curl --include --request "PATCH" "http://example.com/donuts/42" \
 Write an AJAX request to change the donut on the server using JSON.
 
 ```js
-let createDonut = function (donutID) {
+let updateDonut = function (donutID) {
   return $.ajax({
     url: 'http://localhost:3000/donuts/' + donutID,
     method: 'PATCH',
