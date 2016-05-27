@@ -29,7 +29,7 @@ Write an AJAX request to retrieve a list of all donuts on the server.
 ```js
 let getDonuts = function () {
   return $.ajax({
-    url: http://www.example.com/donuts,
+    url: 'http://www.example.com/donuts',
     method: 'GET',
   });
 };
@@ -103,7 +103,7 @@ Write an AJAX request to create a single donut on the server using JSON.
 ```js
 let createDonut = function () {
   return $.ajax({
-    url: 'http://localhost:3000/donuts',
+    url: 'http://example.com/donuts',
     method: 'POST',
     data: {
       "donut" {
@@ -145,12 +145,11 @@ Write an AJAX request to change the donut on the server using JSON.
 ```js
 let updateDonut = function (donutID) {
   return $.ajax({
-    url: 'http://localhost:3000/donuts/' + donutID,
+    url: 'http://example.com/donuts/' + donutID,
     method: 'PATCH',
     data: {
       "donut" {
         "name": "French Cruller",
-        "price": "$0.99"
       }
     }
   });
